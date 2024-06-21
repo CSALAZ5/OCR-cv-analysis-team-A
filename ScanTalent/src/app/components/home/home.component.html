@@ -1,0 +1,60 @@
+<bdb-at-toast #atToastElement1 [type]="currentType" [titleToast]="currentToastTitle" [textDesc]="currentToastMessage">
+</bdb-at-toast>
+
+<div class="container-home">
+  <div class="header">
+    <bdb-ml-header label-title="ScanTalent - Descubre el Talento Oculto" back='FALSE' close='FALSE'></bdb-ml-header>
+  </div>
+
+  <div class="row" style="margin: var(--sherpa-spacing-2) var(--sherpa-spacing-13);">
+    <div class="col-md-6" style="padding: var(--sherpa-spacing-8);">
+      <!-- Sección de Bienvenida -->
+      <div class="welcome-section">
+        <h1 style="font-size: 50px !important;padding-bottom: var(--sherpa-spacing-8);">¡Bienvenido a ScanTalent!</h1>
+        <p style="padding: var(--sherpa-spacing-2);">La herramienta definitiva para revolucionar tu proceso de selección de talento.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="gifEntretenido row" style="justify-content: space-around;">
+        <div class="col-md-auto" style="text-align: center;">
+            <img src="./assets/images/giphy.gif">
+            <em><p>*HR using ScanTalent*</p></em>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="container row" style="margin: var(--sherpa-spacing-4);">
+    <div class="card col-md-auto">
+      <h3>Cargar Archivos</h3>
+      <div class="drop_box">
+        <header>
+          <h4>Carga la hoja de Vida</h4>
+        </header>
+        <p>Archivos soportados: PDF, TEXT, DOC , DOCX</p>
+          <input #fileInput class="btn" type="file" (change)="onFileSelected($event)" accept=".pdf" />
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <div *ngIf="data.length > 0" class="tabla-archivos row" style="justify-content: space-around; margin: var(--sherpa-spacing-10) var(--sherpa-spacing-8);">
+    <div class="col-lg-8">
+      <h2 style="padding-bottom: var(--sherpa-spacing-4)">Archivos Cargados</h2>
+      <bdb-ml-dynamic-table
+      [columnTable]='columnasTablaArchivos'
+        [rowTable]='this.data' (buttonClick)="abrirDetalleArchivo($event)"></bdb-ml-dynamic-table>
+    </div>
+  </div>
+</div>
+
+<bdb-ml-modal-normal size-modal="lg" #normalModal>
+  <div slot="body-modal" style="padding-bottom: var(--sherpa-spacing-2);">
+    <app-detalle-cv [detalleArchivosinFormato]="detalleArchivo"></app-detalle-cv>
+  </div>
+</bdb-ml-modal-normal>
+

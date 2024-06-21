@@ -1,0 +1,101 @@
+<body>
+  <div class="container-box">
+    <div class="row">
+      <div class="col-lg-6 datos-contacto-habilidades-perfil">
+        <div class="row datos" style="justify-content: space-around; margin-bottom: var(--sherpa-spacing-7);">
+          <div class="col-lg-12 container-resumen">
+            <div class="bdb-ml-resume__header">
+              <div class="bdb-ml-resume__header__avatar">
+                <bdb-at-avatar color="rose" size="lg" [text]="this.detalleArchivo.nombreCandidato" enable=true
+                  badge=false></bdb-at-avatar>
+              </div>
+              <div class="bdb-ml-resume__header__info">
+                <div class="bdb-ml-resume__header__info__title">
+                  <label class="sherpa-typography-title-1">{{this.detalleArchivo.nombreCandidato}}</label>
+                </div>
+              </div>
+            </div>
+            <div class="bdb-ml-resume__line">
+            </div>
+          </div>
+        </div>
+        <div class="row contacto" style="justify-content: center; margin-bottom: var(--sherpa-spacing-7);">
+          <div class="col-lg-12">
+            <div class="bdb-ml-resume__detail contacto">
+              <div class="col-lg-12 bdb-ml-resume__detail_nombre">
+                <div class="sherpa-typography-label-1 bdb-ml-resume__detail__info__title">
+                  <label>Teléfono:</label>
+                </div>
+                <div class="sherpa-typography-title-3 bdb-ml-resume__detail__info__value">
+                  <label>{{this.detalleArchivo.contacto.telefono}}</label>
+                </div>
+              </div>
+              <div class="col-lg-12 bdb-ml-resume__detail_estado">
+                <div class="sherpa-typography-label-1 bdb-ml-resume__detail__info__title">
+                  <label>Correo:</label>
+                </div>
+                <div class="sherpa-typography-title-3 bdb-ml-resume__detail__info__value">
+                  <label>{{this.detalleArchivo.contacto.correoElectronico}}</label>
+                </div>
+              </div>
+              <div class="col-lg-12 bdb-ml-resume__detail_unidad">
+                <div class="sherpa-typography-label-1 bdb-ml-resume__detail__info__title">
+                  <label>Perfil Profesional:</label>
+                </div>
+                <div class="sherpa-typography-title-3 bdb-ml-resume__detail__info__value">
+                  <label>{{this.detalleArchivo.perfilProfesional}}</label>
+                </div>
+              </div>
+              <div class="col-lg-12 bdb-ml-resume__detail_segmento">
+                <div class="sherpa-typography-label-1 bdb-ml-resume__detail__info__title">
+                  <label>Habilidades:</label>
+                </div>
+                <ul>
+                  <li *ngFor="let habilidad of this.detalleArchivo.habilidades"
+                    class="sherpa-typography-title-3 bdb-ml-resume__detail__info__value">
+                    {{ habilidad }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row habilidades" style="justify-content: center;">
+        <div class="col-lg-6">
+        </div>
+        <div class="col-lg-6">
+        </div>
+      </div>
+      <div class="row perfil" style="justify-content: center;">
+        <div class="col-lg-6">
+
+        </div>
+
+        <div class="col-lg-6">
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 experiencia-educacion-">
+      <div class="row experiencia">
+        <div class="col-lg-12 bdb-ml_container-box">
+          <div class="col-lg-12"
+            style="margin-bottom: var(--sherpa-spacing-4);display: flex; flex-flow: row; align-items: center;">
+            <bdb-ml-content-title avatar='{"icon":"ico-checklist"}'
+              title-label="Experiencia Laboral"></bdb-ml-content-title>
+          </div>
+        </div>
+      </div>
+
+      <div class="row experiencia">
+        <div class="col-lg-12 bdb-ml_container-box">
+          <div class="col-lg-12"
+            style="margin-bottom: var(--sherpa-spacing-4);display: flex; flex-flow: row; align-items: center;">
+            <bdb-ml-content-title avatar='{"icon":"ico-checklist"}' title-label="Educación"></bdb-ml-content-title>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>

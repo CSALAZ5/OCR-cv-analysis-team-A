@@ -1,0 +1,94 @@
+::ng-deep body {
+  margin: 0px !important;
+  background-color: var(--sherpa-midnight-50) !important;
+}
+
+.container {
+  width: 99.9% !important;
+}
+
+.container-box {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.container-text-box {
+  margin-bottom: var(--sherpa-spacing-8);
+  display: flex;
+  flex-direction: column;
+}
+
+.container-resumen {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: solid 1px var(--sherpa-midnight-400);
+  background-color: var(--sherpa-midnight-200);
+  padding: var(--sherpa-spacing-6) var(--sherpa-spacing-4);
+}
+
+.bdb-ml-resume__header {
+  display: flex;
+  padding-bottom: var(--sherpa-spacing-4);
+}
+
+.bdb-ml-resume__header__avatar {
+  margin-right: var(--sherpa-spacing-4);
+}
+
+.bdb-ml-resume__line {
+  height: 1px;
+  background-color: var(--sherpa-midnight-400);
+  margin-bottom: var(--sherpa-spacing-4);
+}
+
+.bdb-ml-resume__detail {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: var(--sherpa-spacing-4);
+  justify-content: space-between;
+  row-gap: var(--sherpa-spacing-4);
+}
+
+.bdb-ml-resume__detail__info__title {
+  color: var(--sherpa-carbon-800);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bdb-ml-resume__detail__info__value {
+  align-content: flex-start;
+  color: var(--sherpa-carbon-900);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bdb-ml_container-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: var(--sherpa-carbon-200) solid 1px;
+  border-radius: var(--sherpa-spacing-4);
+  background-color: var(--sherpa-white);
+  padding: var(--sherpa-spacing-6) var(--sherpa-spacing-3);
+  margin-bottom: var(--sherpa-spacing-7);
+}
+
+.bdb-ml_container-avatar {
+  display: flex;
+  margin-right: var(--sherpa-spacing-4);
+}
+
+.progressBar {
+  padding-bottom: var(--sherpa-spacing-7);
+  padding-left: var(--sherpa-spacing-7);
+  padding-right: var(--sherpa-spacing-7);
+  text-align: center;
+}
